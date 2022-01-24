@@ -1,0 +1,13 @@
+{{!-- esto nos recorrerá el metodo flash para errores y confirmaciones y de esta manera podremos
+verlos por pantalla o trabajar con ellos. (buscar flash en index.js y notes.js) --}}
+
+{{#if success_msg}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{!-- para que nos escriba el texto de erorres --}}
+   {{success_msg}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+{{/if}}

@@ -1,0 +1,38 @@
+SENTENCIAS MONGODB
+
+mostrar dbs = show dbs
+seleccionar una = use nombreBaseDeDatos
+db = nos muestra en que base de datos estamos
+use nombreBaseDeDatos = a seleccionar una base de datos pero si mongo no la encuentra la crea automaticamente
+crear collecion(tabla)=db.createCollection('nombrebase')
+show collections = nos muestra nuestra tabla o collecion
+/////
+si tenemos un archivo json con datos que queramos meter en nuestra 
+db, lo que debemos hacer es:
+db.nombreBaseDatos.insert({aquí irian todos los datos})
+
+db.nombreBaseDatos.find().pretty()= para que nos muestre que hay en nuestra db
+.pretty() hace que se vea de una forma más amigable y bonita.
+
+///
+en caso de querer buscar por un datos especial sería:
+
+db.nombreBaseDatos.find({name:"nombre"})
+así para cualquier dato, username, email, telephone etc.
+
+/////
+para actualizar
+
+db.nombreBaseDatos.update({Age:35}, {$set:{Age:45}})
+
+primer parametro le decimos que queremos actualizar
+y con $set le marcamos la actualización
+
+/////
+para eliminar
+
+db.nombreBaseDatos.deleteOne({Name:"nombre"})
+
+en este caso lo que hacemos es eliminar cualquier registro con los
+datos que le ofrecemos, en este caso cualquier nombre llamado
+nombre será eliminado de los registros
